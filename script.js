@@ -1,40 +1,37 @@
-const root = document.documentElement;
-const themeToggle = document.querySelector('.theme-toggle');
-const themeIcon = document.querySelector('.theme-toggle__icon');
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.site-nav');
-const form = document.querySelector('#waitlist-form');
-const formMessage = document.querySelector('#form-message');
-
-const savedTheme = localStorage.getItem('infinity-theme');
-if (savedTheme === 'light') {
-  root.classList.add('theme-light');
-  themeIcon.textContent = '☾';
-} else {
-  root.classList.remove('theme-light');
-  themeIcon.textContent = '☀︎';
-}
-
-themeToggle?.addEventListener('click', () => {
-  const isLight = root.classList.toggle('theme-light');
-  localStorage.setItem('infinity-theme', isLight ? 'light' : 'dark');
-  themeIcon.textContent = isLight ? '☾' : '☀︎';
+const menu=document.querySelector('.menu-toggle');
+const nav=document.querySelector('.site-nav');
+menu?.addEventListener('click',()=>{
+  const open=menu.getAttribute('aria-expanded')==='true';
+  menu.setAttribute('aria-expanded',String(!open));
+  nav?.classList.toggle('open');
 });
 
-menuToggle?.addEventListener('click', () => {
-  const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-  menuToggle.setAttribute('aria-expanded', String(!expanded));
-  nav?.classList.toggle('is-open');
+document.querySelectorAll('.site-nav a').forEach(a=>a.addEventListener('click',()=>nav?.classList.remove('open')));
+
+document.querySelectorAll('[data-alert]').forEach(btn=>{
+  btn.addEventListener('click',()=>alert(btn.dataset.alert+' selected. Connect your lessons/resources backend here.'));
 });
 
-form?.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const email = document.querySelector('#email')?.value?.trim();
-  if (!email) {
-    formMessage.textContent = 'Please enter your email to request access.';
-    return;
+document.querySelectorAll('.options button').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const feedback=document.querySelector('#quiz-feedback');
+    document.querySelectorAll('.options button').forEach(x=>x.disabled=true);
+    if(btn.dataset.correct==='true'){
+      feedback.textContent='✅ Correct! Going Concern Concept assumes the business will continue operating for the foreseeable future.';
+      feedback.className='quiz-feedback correct';
+    }else{
+      feedback.textContent='❌ Not quite. The correct answer is B. Going Concern Concept.';
+      feedback.className='quiz-feedback wrong';
+    }
+  });
+});
+
+document.querySelector('#copy-address')?.addEventListener('click',async()=>{
+  const address='Shop No. 12, Napoleon Tower, Sai World Empire, Kharghar, Navi Mumbai';
+  try{
+    await navigator.clipboard.writeText(address);
+    document.querySelector('#copy-address').textContent='Copied ✓';
+  }catch{
+    alert(address);
   }
-
-  formMessage.textContent = `Thanks, ${email}! You are on the waitlist.`;
-  form.reset();
 });
