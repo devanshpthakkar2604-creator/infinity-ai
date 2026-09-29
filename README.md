@@ -1,6 +1,6 @@
 # Jeevika Edu Academy App
 
-A modern, mobile-first education platform concept for **Jeevika Edu Academy**.
+A modern, mobile-first education platform for **Jeevika Edu Academy**.
 
 ## Brand
 - Name: JEEVIKA EDU ACADEMY
@@ -16,16 +16,13 @@ A modern, mobile-first education platform concept for **Jeevika Edu Academy**.
 - Notices and updates
 - Contact / WhatsApp CTA
 - Responsive premium academic UI
-- Brand-ready structure for the supplied logo
+- GitHub Pages deployment workflow
 
-## Project structure
-```
-apps/web/
-  app/
-  components/
-  public/branding/
-docs/
-```
+## Launch
+The site is configured for GitHub Pages through GitHub Actions. Pushes to `main` trigger deployment.
+
+Expected URL:
+https://devanshpthakkar2604-creator.github.io/infinity-ai/
 
 ## Roadmap
 Phase 1: Public website + student dashboard shell
