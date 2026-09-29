@@ -1,187 +1,111 @@
 <!DOCTYPE html>
 <html lang="en" class="theme-light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Infinity AI brings conversational intelligence, creative generation, and fast workflows into one premium experience."
-    />
-    <meta name="theme-color" content="#060816" />
-    <title>Infinity AI — The future of intelligent work</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="background-glow glow-one"></div>
-    <div class="background-glow glow-two"></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jeevika Edu Academy — Learn. Excel. Succeed.">
+  <meta name="theme-color" content="#0f3b67">
+  <title>Jeevika Edu Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="Jeevika Edu Academy home">
+    <span class="brand-mark" aria-hidden="true"><span class="sun"></span><span class="book left"></span><span class="book right"></span></span>
+    <span class="brand-copy"><strong>JEEVIKA</strong><small>EDU ACADEMY</small><em>LEARN. EXCEL. SUCCEED.</em></span>
+  </a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">☰</button>
+  <nav id="site-nav" class="site-nav">
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#resources">Resources</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="wa-btn" href="https://wa.me/917021998771" target="_blank" rel="noreferrer">WhatsApp</a>
+</header>
 
-    <header class="site-header">
-      <a class="brand" href="#hero">
-        <span class="brand-mark">∞</span>
-        <span>Infinity AI</span>
-      </a>
+<main>
+<section id="home" class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">SMARTER LEARNING • BETTER RESULTS</span>
+    <h1>Learn. Excel.<br><span>Succeed.</span></h1>
+    <p>Concept-first learning for Commerce, Economics, Finance & Accounting — with focused practice and exam-ready resources.</p>
+    <div class="actions">
+      <a class="btn primary" href="#courses">Explore Courses</a>
+      <a class="btn secondary" href="#quiz">Try Today's Quiz</a>
+    </div>
+    <div class="quick-stats">
+      <div><strong>🎓</strong><span>Commerce focused</span></div>
+      <div><strong>🧠</strong><span>Daily practice</span></div>
+      <div><strong>📚</strong><span>Exam ready</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="desk-card">
+      <div class="floating-badge">JEEVIKA EDU ACADEMY</div>
+      <div class="desk-books"></div>
+      <div class="note"><strong>Today’s Focus</strong><span>Concept clarity → Practice → Confidence</span></div>
+    </div>
+  </div>
+</section>
 
-      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+<section id="courses" class="section">
+  <div class="section-head">
+    <div><span class="eyebrow">FEATURED COURSES</span><h2>Build strong fundamentals.</h2></div>
+  </div>
+  <div class="course-grid">
+    <article class="card"><div class="icon">📈</div><h3>Economics</h3><p>Microeconomics, Macroeconomics, Statistics & core concepts.</p><button data-alert="Economics">View course</button></article>
+    <article class="card"><div class="icon">📚</div><h3>Finance & Accounting</h3><p>Business Finance, Financial Management, Accounting, Taxation & Auditing.</p><button data-alert="Finance & Accounting">View course</button></article>
+    <article class="card"><div class="icon">∑</div><h3>Business Mathematics</h3><p>Step-by-step methods, practice sets and revision support.</p><button data-alert="Business Mathematics">View course</button></article>
+    <article class="card"><div class="icon">🎓</div><h3>NMIMS Special Batches</h3><p>Focused preparation with previous university question-paper practice.</p><button data-alert="NMIMS Special Batches">View course</button></article>
+  </div>
+</section>
 
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#features">Features</a>
-        <a href="#studio">Studio</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#waitlist">Waitlist</a>
-      </nav>
+<section id="quiz" class="section quiz-section">
+  <div class="quiz-card">
+    <span class="eyebrow">QUIZ OF THE DAY</span>
+    <h2>Can you answer this in 10 seconds?</h2>
+    <p class="question">Which accounting concept assumes that a business will continue to operate for the foreseeable future?</p>
+    <div class="options">
+      <button data-correct="false">A. Matching Concept</button>
+      <button data-correct="true">B. Going Concern Concept</button>
+      <button data-correct="false">C. Prudence Concept</button>
+      <button data-correct="false">D. Consistency Concept</button>
+    </div>
+    <div id="quiz-feedback" class="quiz-feedback" aria-live="polite"></div>
+  </div>
+</section>
 
-      <button class="theme-toggle" aria-label="Toggle dark mode">
-        <span class="theme-toggle__icon">☀︎</span>
-      </button>
-    </header>
+<section id="resources" class="section">
+  <div class="section-head">
+    <div><span class="eyebrow">RESOURCES</span><h2>Study smarter.</h2></div>
+  </div>
+  <div class="resource-grid">
+    <button class="resource" data-alert="Previous Year Question Papers">📄 <span><strong>Previous Year Question Papers</strong><small>Exam practice</small></span>→</button>
+    <button class="resource" data-alert="Quick Revision Notes">📝 <span><strong>Quick Revision Notes</strong><small>Chapter-wise</small></span>→</button>
+    <button class="resource" data-alert="Quiz Archive">🧩 <span><strong>Quiz of the Day Archive</strong><small>Test yourself</small></span>→</button>
+    <button class="resource" data-alert="Batch Updates">📣 <span><strong>Class & Batch Updates</strong><small>Latest notices</small></span>→</button>
+  </div>
+</section>
 
-    <main>
-      <section class="hero" id="hero">
-        <div class="hero__content">
-          <span class="pill">New • AI-native workspace</span>
-          <h1>Build faster with an intelligent command center.</h1>
-          <p>
-            Infinity AI unifies chat, automation, visuals, and analytics in a single,
-            beautifully crafted experience for modern teams.
-          </p>
-          <div class="hero__actions">
-            <a class="button button--primary" href="#waitlist">Join the waitlist</a>
-            <a class="button button--ghost" href="#studio">Explore the studio</a>
-          </div>
-          <ul class="hero__stats">
-            <li><strong>24/7</strong><span>AI copilots</span></li>
-            <li><strong>10x</strong><span>faster delivery</span></li>
-            <li><strong>100%</strong><span>secure by design</span></li>
-          </ul>
-        </div>
+<section id="contact" class="section contact-section">
+  <span class="eyebrow">CONTACT</span>
+  <h2>Ready to start learning?</h2>
+  <div class="contact-grid">
+    <div class="contact-card"><span class="contact-icon">💬</span><h3>WhatsApp</h3><p>070219 98771</p><a class="btn primary" href="https://wa.me/917021998771" target="_blank" rel="noreferrer">Chat now</a></div>
+    <div class="contact-card"><span class="contact-icon">📍</span><h3>Visit the Academy</h3><p>Shop No. 12, Napoleon Tower, Sai World Empire, Kharghar, Navi Mumbai</p><button class="btn secondary" id="copy-address">Copy address</button></div>
+  </div>
+</section>
+</main>
 
-        <div class="hero__card" aria-label="Product preview">
-          <div class="dashboard-card">
-            <div class="dashboard-card__top">
-              <span class="chip chip--active">Live</span>
-              <span class="chip">Multi-model</span>
-            </div>
-            <div class="dashboard-card__body">
-              <div class="graph"></div>
-              <div class="mini-panel">
-                <h3>AI Studio</h3>
-                <p>Generate pitch decks, scripts, and visuals in minutes.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="features">
-        <div class="section-heading">
-          <span class="pill">Core capabilities</span>
-          <h2>Everything your team needs to move from idea to launch.</h2>
-        </div>
-
-        <div class="feature-grid">
-          <article class="feature-card">
-            <h3>Conversational AI</h3>
-            <p>Turn plain English into action with smart agents that understand context.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Visual creation</h3>
-            <p>Create polished assets, presentations, and product concepts with a single prompt.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Workflow automation</h3>
-            <p>Trigger tasks, sync data, and orchestrate operations without leaving the workspace.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section split-section" id="studio">
-        <div>
-          <span class="pill">Studio mode</span>
-          <h2>Design, analyze, and ship from one elegant control panel.</h2>
-          <p>
-            From campaign planning to creative production, Infinity AI gives you a premium operating system for modern work.
-          </p>
-        </div>
-        <div class="panel-list">
-          <div class="panel-item">
-            <strong>Realtime collaboration</strong>
-            <span>Share prompts, projects, and feedback instantly.</span>
-          </div>
-          <div class="panel-item">
-            <strong>Smart memory</strong>
-            <span>Keep context consistent across tasks and teams.</span>
-          </div>
-          <div class="panel-item">
-            <strong>Enterprise-ready</strong>
-            <span>Built with privacy, access controls, and reliability in mind.</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="pricing">
-        <div class="section-heading">
-          <span class="pill">Pricing</span>
-          <h2>Choose a plan that fits your growth.</h2>
-        </div>
-
-        <div class="pricing-grid">
-          <article class="pricing-card">
-            <h3>Starter</h3>
-            <p class="price">$19<span>/mo</span></p>
-            <ul>
-              <li>3 AI workspaces</li>
-              <li>Basic automation</li>
-              <li>Email support</li>
-            </ul>
-            <a class="button button--ghost" href="#waitlist">Get started</a>
-          </article>
-          <article class="pricing-card pricing-card--featured">
-            <h3>Pro</h3>
-            <p class="price">$79<span>/mo</span></p>
-            <ul>
-              <li>Unlimited projects</li>
-              <li>Advanced model access</li>
-              <li>Priority support</li>
-            </ul>
-            <a class="button button--primary" href="#waitlist">Join Pro</a>
-          </article>
-          <article class="pricing-card">
-            <h3>Scale</h3>
-            <p class="price">Custom</p>
-            <ul>
-              <li>Multi-team governance</li>
-              <li>Security review</li>
-              <li>Dedicated onboarding</li>
-            </ul>
-            <a class="button button--ghost" href="#waitlist">Talk to sales</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="section auth-section" id="waitlist">
-        <div>
-          <span class="pill">Early access</span>
-          <h2>Reserve your place in the next wave of AI tools.</h2>
-          <p>Join the waitlist to get launch updates, beta invites, and early pricing.</p>
-        </div>
-        <form class="waitlist-form" id="waitlist-form">
-          <input type="email" id="email" name="email" placeholder="Enter your email" required />
-          <button type="submit" class="button button--primary">Request access</button>
-          <p class="form-message" id="form-message" aria-live="polite"></p>
-        </form>
-      </section>
-    </main>
-
-    <script src="script.js"></script>
-  </body>
+<footer class="footer">
+  <div><strong>JEEVIKA EDU ACADEMY</strong><span>LEARN. EXCEL. SUCCEED.</span></div>
+  <div>Shop No. 12, Napoleon Tower, Sai World Empire, Kharghar, Navi Mumbai<br>WhatsApp: 070219 98771</div>
+</footer>
+<script src="script.js"></script>
+</body>
 </html>
